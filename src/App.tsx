@@ -9,7 +9,8 @@ const WatermarkTool = lazy(() => import('./tools/WatermarkTool'))
 const EditTool = lazy(() => import('./tools/EditTool'))
 const ConvertTool = lazy(() => import('./tools/ConvertTool'))
 
-const REPO_URL = (import.meta.env.VITE_REPO_URL as string | undefined) ?? 'https://github.com/suryo12/pdf-tools'
+// Source link is hidden unless VITE_REPO_URL is set at build time (e.g. VITE_REPO_URL=https://github.com/org/repo npm run build).
+const REPO_URL = (import.meta.env.VITE_REPO_URL as string | undefined) || undefined
 
 type ToolId = 'compress' | 'merge' | 'split' | 'watermark' | 'edit' | 'convert'
 

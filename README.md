@@ -45,7 +45,7 @@ npm run build
 npx wrangler pages deploy dist --project-name <your-pages-project>
 ```
 
-Set `VITE_REPO_URL` at build time to change the source link shown in the header and footer.
+Set `VITE_REPO_URL` at build time to show a source link in the header, footer and privacy dialog (hidden by default).
 
 ## Known limits
 
